@@ -1,0 +1,18 @@
+.content {
+	margin: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+#character-type {
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 2%;
+}
+
+#character-type .pure-radio {
+	display: inline-block;
+	padding-right: 2%
+}
