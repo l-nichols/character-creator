@@ -3,29 +3,35 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Character Creator</title>
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div class="content">
-		<form id="character-type" class="pure-form">
+	<div class="head-container">
+		<p>
+			<h2>Character Creator</h2>
+		</p>
+	</div>
+	<div class="container">
+		<form>
 			<p>
-				<label for="protagonist" class="pure-radio">
+				<label for="protagonist">
 					<input id="protagonist" type="radio" name="optionsRadios" value="protagonist" checked>
 					Protagonist
 				</label>
-
-				<label for="antagonist" class="pure-radio">
+			</p>
+			<p>
+				<label for="antagonist">
 					<input id="antagonist" type="radio" name="optionsRadios" value="antagonist">
 					Antagonist
 				</label>
 			</p>
 			<p>
-				<button class="pure-button pure-button-primary">Make A New Character
+				<button>New Character
 				</button>
 			</p>
-			
+
 		</form>
 
 	</div>
