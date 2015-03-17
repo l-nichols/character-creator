@@ -1,3 +1,11 @@
+/* 
+Blue = #01AFD1
+Dk Grey = #1B2E35
+Lt Grey = #9FA7B4
+Green = #1FBBA6
+Orange = #F37936
+*/
+
 body {
 	background-color: #eeeeee;
 	color: white;
@@ -23,10 +31,7 @@ body {
 .container {
 	width: 50%;
 	margin: 2% auto;
-	/*border-radius: 10em;*/
 	background-color: #1FBBA6;
-	/*border: 1px solid #597A9D;*/
-	/*box-shadow: 10px 10px 5px #597A9D;*/
 }
 
 .container p {
@@ -41,8 +46,6 @@ body {
 }
 
 button {
-	/*border-radius: 5em;*/
 	background-color: #168374;
 	border: none;
-	/*box-shadow: 5px 5px 2px #cccccc;*/
 }
