@@ -1,0 +1,10 @@
+Planned
+- Finish Traits and Descriptions
+- Change Radio Buttons to Number Pickers and Positive and Negative
+- Style boxes that will go on page
+- Write Code to box to page with random color when button is pressed
+- Write Code to add text to the box with the character traits
+
+Possible
+- Add Copy/Paste Button functionality
+- Add Edit functionality to swap out traits for one another
