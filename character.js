@@ -18,24 +18,54 @@ $( document ).ready(function() {
 });
 
 var positiveTraits = [	
-	['Creative', 'Someone who is original, ingenious, or adaptive. This person might come up with a new way to look at an old problem, make interesting art, or invent something incredible.'],
+	['Creative', 'Someone who is original, ingenious, or adaptive.'],
 	['Curious', 'Someone who is interested in new things and open to new experiences.'],
-	['Open-Minded', 'Someone who has good judgement and the ability to think critically about issues and decisions without allowing biases or preconceived notions to affect decisions and conclusions.'],
+	['Open-Minded', 'Someone who is receptive to and willing to actively seek out evidence against their favored beliefs.'],
 	['A Life-long Learner', 'Someone who actively seeks out new skills and knowledge.'],
 	['Wise', 'Someone who uses their cumulative knowledge and experience to evaluate matters and make sense of them.'],
 	['Persistent', 'Someone who perseveres and finishes what they start despite obstacles.'],
-	['Brave', 'Someone who does what needs to be done despite being afraid.']
+	['Brave', 'Someone who does what needs to be done despite being afraid.'],
+	['Honest', 'Someone who is true to themselves and honest with others.'],
+	['Enthusiastic', 'Someone who approaches activities and life with zest and eagerness.'],
+	['Loving', 'Someone who is able to form secure, healthy attachments with other people.'],
+	['Kind', 'Someone who is compassionate and concerned for others\' welfare.' ],
+	['Emotionally Intelligent', 'Someone who is able to perceive and process information about motives and feelings that relate to the well-being of themselves or others.'],
+	['Socially Responsible', 'Someone who have a sense of duty and teamwork and pull their own weight in groups that they are a member of such as their family, co-workers, union-members, etc.'],
+	['Good Leader', 'Someone who is a good leader'],
+	['Merciful', 'Someone who forgives and is merciful'],
+	['Modest', 'Someone with humility and modesty.'],
+	['Self-Regulated', 'Someone who displays self control'],
+	['Appreciative of Beauty and Excellence', 'Someone who experiences awe and wonder'],
+	['Grateful', 'Someone who is grateful for what they have in life'],
+	['Hopeful', 'Someone who has hope'],
+	['Playful', 'Someone with a sense of humor'],
+	['Spiritual', 'Someone who is spiritual']
 ]
 
 
 var negativeTraits = [
-	['Unimaginative', 'Someone who is uninspired or unable to adapt. This person doesn\'t just dislike thinking outside the box.  They\'re completely unable to do so.'],
-	['Disinterested', 'Someone who doesn\'t care about novelty and has no interest in new experiences or trying new things. Or perhaps someone who has stopped seeking new experiences and things or someone world-weary for whom nothing at all is new.'],
-	['Closed-Minded', 'Someone who is prejudiced or dogmatic. This person allows personally held beliefs to affect their decision-making abilities and judgement.'],
+	['Unimaginative', 'Someone who is uninspired or unable to adapt. Someone who cannot think outside the box.'],
+	['Disinterested', 'Someone who doesn\'t care about novelty and has no interest in new experiences or trying new things. Or perhaps someone world-weary for whom nothing at all is new.'],
+	['Closed-Minded', 'Someone who displays a tendency to think in ways that favor their current beliefs and who will discard evidence that conflicts with their established beliefs.'],
 	['Resistant to Learning', 'Someone who dislikes and avoids learning new skills and knowledge.'],
-	['Foolish', 'Someone who does not learn from experience. A foolish person may have knowledge and experience, but they are unable to use either one to inform their actions or advise others.'],
-	['A Quitter', 'Someone who is faint-hearted and gives up at the first sign of difficulty. A person who is a quitter may lack confidence in their ability to overcome obstacles, or they may simply not wish to expend the effort necessary.'],
-	['Cowardly', 'Someone for whom fear keeps them from accomplishing what they wish to accomplish or from doing the right thing because they are afraid of the consequences. Many people have specific fears or phobias, but a cowardly person may have many fears that stop them from doing many things.  Or they may choose to avoid standing up for what is right when presented with a trying situation.']
+	['Foolish', 'Someone who does not learn from experience.'],
+	['A Quitter', 'Someone who is faint-hearted and gives up at the first sign of difficulty.'],
+	['Cowardly', 'Someone for whom fear keeps them from accomplishing what they wish to accomplish or from doing the right thing because they are afraid of the consequences.'],
+	['Dishonest', 'Someone who lies to others either overtly or through pretension or insincerity.'],
+	['Unenthusiastic', 'Someone who is subdued or sluggish and approaches life with little enthusiasm or energy.'],
+	['Hateful', 'Someone who is not capable of forming healthy, secure attachments with other people.'],
+	['Mean', 'Someone who is mean-spirited or petty who refrains from generosity.'],
+	['Emotionally Ignorant', 'Someone who is clueless about the feelings or motivations of themselves or others.'],
+	['Selfish', 'Someone does not pull their own weight in groups and does not display teamwork or good citizenship.'],
+	['Bad Leader', 'Someone who is not a good leader'],
+	['Unmerciful', 'Someone who does not forgive and is not merciful'],
+	['Immodest', 'Someone with no humility and modesty.'],
+	['Undisciplined', 'Someone who displays no self control'],
+	['Unappreciative of Beauty and Excellence', 'Someone who experiences no awe and wonder'],
+	['Ungrateful', 'Someone who takes things for granted'],
+	['Not Hopeful', 'Someone who has no hope'],
+	['Not Playful', 'Someone with no sense of humor'],
+	['Not Spiritual', 'Someone who is not spiritual']
 ]
 
 //Picks a random color within the theme
