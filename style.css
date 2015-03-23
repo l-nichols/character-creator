@@ -40,12 +40,18 @@ body {
 	display: block;
 }
 
-.container button {
+button {
 	width: 50%;
 	height: 50px;
-}
-
-button {
 	background-color: #168374;
 	border: none;
+}
+
+.character-container {
+	width: 75%;
+	margin: 2% auto;
+}
+
+.character-container p {
+	padding: 1em;
 }
