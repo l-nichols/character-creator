@@ -52,10 +52,25 @@ button {
 }
 
 .character-container {
-	width: 75%;
-	margin: 2% auto;
+	height: 350px;
+	float: left;
+	margin: 2%;
+	width: 28%;
+	overflow: auto;
 }
 
 .character-container p {
-	padding: 1em;
+	padding: .5em;
+}
+
+@media (max-width: 1300px) {
+  .character-container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 800px) {
+	.character-container {
+		width: 75%;
+	}
 }
