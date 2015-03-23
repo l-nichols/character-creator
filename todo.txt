@@ -1,5 +1,4 @@
 Planned
-- Make better descriptions for good leader forward
 - Add validations for the number inputs for non-numerical inputs and out of bounds inputs
 - Consider refactoring the character creation function - it's kind of ugly
 - Consider refactoring the index of function to only return the top level index and using that in the formulas instead

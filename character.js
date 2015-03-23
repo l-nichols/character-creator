@@ -33,15 +33,14 @@ var positiveTraits = [
 	['Kind', 'Someone who is compassionate and concerned for others\' welfare.' ],
 	['Emotionally Intelligent', 'Someone who is able to perceive and process information about motives and feelings that relate to the well-being of themselves or others.'],
 	['Socially Responsible', 'Someone who have a sense of duty and teamwork and pull their own weight in groups that they are a member of such as their family, co-workers, union-members, etc.'],
-	['Good Leader', 'Someone who is a good leader'],
-	['Merciful', 'Someone who forgives and is merciful'],
-	['Modest', 'Someone with humility and modesty.'],
-	['Self-Regulated', 'Someone who displays self control'],
-	['Appreciative of Beauty and Excellence', 'Someone who experiences awe and wonder'],
-	['Grateful', 'Someone who is grateful for what they have in life'],
-	['Hopeful', 'Someone who has hope'],
-	['Playful', 'Someone with a sense of humor'],
-	['Spiritual', 'Someone who is spiritual']
+	['Good Leader', 'Someone who can direct a group of people to complete selected goals and who inspires them and maintains good morale.'],
+	['Merciful', 'Someone who forgives wrongs done to them, gives people second chances, or loves their enemies.'],
+	['Modest', 'Someone who lets their accomplishments speak, do not seek the spotlight, and and do not take undue credit.'],
+	['Self-Regulated', 'Someone who does not sacrifice long-term goals for short-term pleasures.'],
+	['Grateful', 'Someone who is thankful and appreciative of what they have received and experienced in life.'],
+	['Hopeful', 'Someone who is optimistic about future events.'],
+	['Playful', 'Someone who does not take themselves or others too seriously.'],
+	['Transcendental', 'Someone who has beliefs about the universe and their place and higher purpose within it.']
 ]
 
 
@@ -59,15 +58,14 @@ var negativeTraits = [
 	['Mean', 'Someone who is mean-spirited or petty who refrains from generosity.'],
 	['Emotionally Ignorant', 'Someone who is clueless about the feelings or motivations of themselves or others.'],
 	['Selfish', 'Someone does not pull their own weight in groups and does not display teamwork or good citizenship.'],
-	['Bad Leader', 'Someone who is not a good leader'],
-	['Unmerciful', 'Someone who does not forgive and is not merciful'],
-	['Immodest', 'Someone with no humility and modesty.'],
-	['Undisciplined', 'Someone who displays no self control'],
-	['Unappreciative of Beauty and Excellence', 'Someone who experiences no awe and wonder'],
-	['Ungrateful', 'Someone who takes things for granted'],
-	['Not Hopeful', 'Someone who has no hope'],
-	['Not Playful', 'Someone with no sense of humor'],
-	['Not Spiritual', 'Someone who is not spiritual']
+	['Poor Leader', 'Someone who either does not take control of a group or does so inneffectively by not insipiring them and maintaining morale or by not accomplishing their goals.'],
+	['Unmerciful', 'Someone who is vengeful, spiteful, and punative.'],
+	['Arrogant', 'Someone who is boastful, immodest, or pompous.'],
+	['Reckless', 'Someone who potentially sacrifices future goals and well-being for short-term gains and pleasures.'],
+	['Ungrateful', 'Someone who takes things for granted and feels that things they have received and experienced were simply their due.'],
+	['Pessimistic', 'Someone who has no hope for the future and focuses primarily on negatives of a situation.'],
+	['Humorless', 'Someone who takes themselves and others too seriously and is not playful.'],
+	['Purposeless', 'Someone who lacks any beliefs about the universe and their place and higher purpose within it.']
 ]
 
 //Picks a random color within the theme
