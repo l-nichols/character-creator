@@ -1,9 +1,7 @@
 Planned
 - Finish Traits and Descriptions
-- Figure out how to make opposite traits unable to be picked
-- Write function for checking array for pre-existing numbers... possibly use this to check for opposites
-- Change Radio Buttons to Number Pickers and Positive and Negative
 - Add code for calling the function with the correct number of positve and negative traits
+- Add validations for the number inputs for non-numerical inputs and out of bounds inputs
 
 Possible
 - Add Copy/Paste Button functionality

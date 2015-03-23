@@ -40,6 +40,10 @@ body {
 	display: block;
 }
 
+.container input {
+	color: #1B2E35;
+}
+
 button {
 	width: 50%;
 	height: 50px;
