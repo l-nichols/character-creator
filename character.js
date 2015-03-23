@@ -5,6 +5,7 @@ $( document ).ready(function() {
  	$("#character-button").click(function(e) {
  		e.preventDefault();
  		color = pickColor();
+ 		//This is the recommended jQuery for adding nested elements to DOM
  		$( "<div><p></p></div>")
  			.css("background-color", color)
   			.addClass("character-container")
@@ -37,17 +38,14 @@ var negativeTraits = [
 	['Cowardly', 'Someone for whom fear keeps them from accomplishing what they wish to accomplish or from doing the right thing because they are afraid of the consequences. Many people have specific fears or phobias, but a cowardly person may have many fears that stop them from doing many things.  Or they may choose to avoid standing up for what is right when presented with a trying situation.']
 ]
 
-//Use randomTrait(either positiveTraits or negativeTraits) to return an array with the name and description
-function randomTrait(array) {
-	var trait = array[array.length * Math.random() << 0];
-	return trait;
-};
-
+//Picks a random color within the theme
 function pickColor() {
 	var colors = ["#F37936", "#1FBBA6", "#9FA7B4", "#1B2E35", "#01AFD1"];
 	return colors[Math.floor(Math.random() * colors.length)];
 };
 
+//Enter number of positive and negative traits desired
+//Returns an nested array containing the name and description of each trait
 function createCharacter(positive, negative) {
 	character = [];
 	positiveArray = positiveTraits.slice();
@@ -106,6 +104,8 @@ function createCharacter(positive, negative) {
 	return character;
 };
 
+//Enter an array and the item that you are searching for
+//Returns an array of the location of the target 
 function getIndexOf(array, testItem){
     for(var i=0; i<array.length; i++){
         var index = array[i].indexOf(testItem);
@@ -115,6 +115,8 @@ function getIndexOf(array, testItem){
     }
 }
 
+//Takes character array and creates an html string that separates each subarray into its own paragraph
+//with the name and description separated by " --- "
 function formatCharacter(characterArray) {
 	string = ""
 	for(var i=0; i < characterArray.length; i++) {
