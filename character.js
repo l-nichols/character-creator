@@ -22,7 +22,6 @@ var positiveTraits = [
 	['Open-Minded', 'Someone who has good judgement and the ability to think critically about issues and decisions without allowing biases or preconceived notions to affect decisions and conclusions.'],
 	['A Life-long Learner', 'Someone who actively seeks out new skills and knowledge.'],
 	['Wise', 'Someone who uses their cumulative knowledge and experience to evaluate matters and make sense of them.'],
-	['Brave', 'Someone who does what needs to be done despite being afraid.'],
 	['Persistent', 'Someone who perseveres and finishes what they start despite obstacles.'],
 	['Brave', 'Someone who does what needs to be done despite being afraid.']
 ]
@@ -34,7 +33,6 @@ var negativeTraits = [
 	['Closed-Minded', 'Someone who is prejudiced or dogmatic. This person allows personally held beliefs to affect their decision-making abilities and judgement.'],
 	['Resistant to Learning', 'Someone who dislikes and avoids learning new skills and knowledge.'],
 	['Foolish', 'Someone who does not learn from experience. A foolish person may have knowledge and experience, but they are unable to use either one to inform their actions or advise others.'],
-	['Cowardly', 'Someone for whom fear keeps them from accomplishing what they wish to accomplish or from doing the right thing because they are afraid of the consequences. Many people have specific fears or phobias, but a cowardly person may have many fears that stop them from doing many things.  Or they may choose to avoid standing up for what is right when presented with a trying situation.'],
 	['A Quitter', 'Someone who is faint-hearted and gives up at the first sign of difficulty. A person who is a quitter may lack confidence in their ability to overcome obstacles, or they may simply not wish to expend the effort necessary.'],
 	['Cowardly', 'Someone for whom fear keeps them from accomplishing what they wish to accomplish or from doing the right thing because they are afraid of the consequences. Many people have specific fears or phobias, but a cowardly person may have many fears that stop them from doing many things.  Or they may choose to avoid standing up for what is right when presented with a trying situation.']
 ]
@@ -51,31 +49,71 @@ function pickColor() {
 };
 
 function createCharacter(positive, negative) {
-	character = []
-	traits = []
+	character = [];
+	positiveArray = positiveTraits.slice();
+	negativeArray = negativeTraits.slice();
 	for(var i=0; i < positive; i++){
-		newTrait = randomTrait(positiveTraits);
-		console.log(newTrait);
-    	while ($.inArray(newTrait[0],traits)!== -1) {
-    		newTrait = randomTrait(positiveTraits);
-    	};
-    		character.push(newTrait);
-    		traits.push(newTrait[0]);
-    		console.log(traits);
+		index = positiveArray.length * Math.random() << 0;
+		character.push(positiveArray[index]);
+		if (positiveArray[index][0] == "Curious" || positiveArray[index][0] == "A Life-long Learner") {
+			trigger = positiveArray[index][0];
+			positiveArray.splice(index, 1);
+			negativeArray.splice(index, 1);
+			if (trigger == "Curious") {
+				console.log("Curious was trigger")
+				newIndex = getIndexOf(positiveArray, "A Life-long Learner");
+				positiveArray.splice((newIndex[0]), 1);
+				newIndex = getIndexOf(negativeArray, "Resistant to Learning");
+				negativeArray.splice((newIndex[0]), 1);
+			}
+			else {
+				console.log("Life-long Learner was trigger");
+				newIndex = getIndexOf(positiveArray, "Curious");
+				positiveArray.splice((newIndex[0]), 1);
+				newIndex = getIndexOf(negativeArray, "Disinterested");
+				negativeArray.splice((newIndex[0]), 1);
+			}
+		}
+    	else {
+    		positiveArray.splice(index, 1);
+    		negativeArray.splice(index, 1);
+    	}
 	}
 
 	for(var i=0; i < negative; i++){
-    	newTrait = randomTrait(negativeTraits)
-    	console.log(newTrait);
-    	while ($.inArray(newTrait[0],traits) !== -1) {
-    		newTrait = randomTrait(negativeTraits);
-    	};
-    		character.push(newTrait);
-    		traits.push(newTrait[0]);
-    		console.log(traits);
-    }
+		index = negativeArray.length * Math.random() << 0;
+    	character.push(negativeArray[index]);
+    	if (negativeArray[index][0] == "Resistant to Learning" || negativeArray[index][0] == "Disinterested") {
+    		trigger = negativeArray[index][0];
+    		positiveArray.splice(index, 1);
+    		negativeArray.splice(index, 1);
+    		if (trigger == "Resistant to Learning") {
+    			console.log("Resistant to learning was trigger");
+    			newIndex = getIndexOf(negativeArray, "Disinterested");
+    			negativeArray.splice((newIndex[0]), 1);
+    		}
+    		else {
+    			console.log("Disinterested was trigger");
+    			newIndex = getIndexOf(negativeArray, "Resistant to Learning");
+    			negativeArray.splice((newIndex[0]), 1);
+    		}
+    	}
+    	else {
+    		positiveArray.splice(index, 1);
+    		negativeArray.splice(index, 1);
+    	}
+	}
 	return character;
 };
+
+function getIndexOf(array, testItem){
+    for(var i=0; i<array.length; i++){
+        var index = array[i].indexOf(testItem);
+        if (index > -1){
+            return [i, index];
+        }
+    }
+}
 
 function formatCharacter(characterArray) {
 	string = ""
@@ -84,16 +122,3 @@ function formatCharacter(characterArray) {
 	}
 	return string;
 };
-
-
-// build this out to pull the testing functionality out of the createCharacter
-function checkArray(array, testItem) {
-	if (array.indexOf(testItem) > -1) {
-		return true
-	}
-	else {
-		return false
-	}
-};
-newArray = $.makeArray(positiveTraits);
-console.log(newArray)
