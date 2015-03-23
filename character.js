@@ -4,6 +4,8 @@ $( document ).ready(function() {
  	
  	$("#character-button").click(function(e) {
  		e.preventDefault();
+ 		var positive  = $( "input[name='positive']" ).val()
+ 		var negative  = $( "input[name='negative']" ).val()
  		color = pickColor();
  		//This is the recommended jQuery for adding nested elements to DOM
  		$( "<div><p></p></div>")
@@ -11,7 +13,7 @@ $( document ).ready(function() {
   			.addClass("character-container")
   			.find("p")
   			.css("text-align", "left")
-  			.html(formatCharacter(createCharacter(2,1)))
+  			.html(formatCharacter(createCharacter(positive,negative)))
   			.end()
   			.insertAfter( ".container" );
  	});
