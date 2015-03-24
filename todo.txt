@@ -1,9 +1,5 @@
-Planned
-- Consider refactoring the character creation function - it's kind of ugly
-- Consider refactoring the index of function to only return the top level index and using that in the formulas instead
-
 Possible
-- Add Copy/Paste Button functionality
+- Add Copy/Paste Button functionality - not going to work well
 	- Add button to jquery functionality
 	- Add code to copy element to clipboard - turns out this is easier said than done.  Need flash or that weird ctrl keydown trick.  Probably not worth it.
 - Add Edit functionality to swap out traits for one another
