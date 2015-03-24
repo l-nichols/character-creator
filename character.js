@@ -3,11 +3,22 @@
 $( document ).ready(function() {
  	
  	$("#character-button").click(function(e) {
+ 		
  		e.preventDefault();
  		var positive  = $( "input[name='positive']" ).val()
  		var negative  = $( "input[name='negative']" ).val()
+ 		if (isInvalid(positive) || isInvalid(negative)) {
+ 			$( "<p></p>")
+ 				.attr('id', 'error')
+ 				.css("color", "red")
+ 				.html("Please enter a number between 1 and 4")
+ 				.insertBefore( "input[name='positive']" );
+ 			return;
+ 		}
+ 		else {
  		color = pickColor();
  		//This is the recommended jQuery for adding nested elements to DOM
+ 		$( "#error").remove();
  		$( "<div><p></p></div>")
  			.css("background-color", color)
   			.addClass("character-container")
@@ -16,6 +27,7 @@ $( document ).ready(function() {
   			.html(formatCharacter(createCharacter(positive,negative)))
   			.end()
   			.insertAfter( ".container" );
+  		}
  	});
 });
 
@@ -153,4 +165,15 @@ function formatCharacter(characterArray) {
 		string += "<p>" + characterArray[i][0] + " --- " + characterArray[i][1] + "</p>";
 	}
 	return string;
+};
+
+//Takes input and determines whether it's the input is valid
+//Returns true if it is invalid and false if it is valid
+function isInvalid(number) {
+	if (isNaN(number) || number < 1 || number > 4) {
+		return true;
+	}
+	else {
+		return false;
+	}
 };
