@@ -64,13 +64,13 @@ button {
 }
 
 @media (max-width: 1300px) {
-  .character-container {
+  .character-container, .container {
     width: 45%;
   }
 }
 
 @media (max-width: 800px) {
-	.character-container {
+	.character-container, .container {
 		width: 90%;
 	}
 }
