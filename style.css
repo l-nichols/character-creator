@@ -1,4 +1,4 @@
-/* 
+/*
 Blue = #01AFD1
 Dk Grey = #1B2E35
 Lt Grey = #9FA7B4
@@ -71,6 +71,6 @@ button {
 
 @media (max-width: 800px) {
 	.character-container {
-		width: 75%;
+		width: 90%;
 	}
 }
